@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Negro carbón (#0D0D0D) → Fondo principal, dando un estilo elegante y profesional.
+Gris oscuro (#1C1C1E) → Para secciones secundarias y bordes sutiles.
+Verde neón (#00FF66) → Color principal para los textos y elementos destacados.
+Blanco humo (#EAEAEA) → Para pequeños detalles o resaltar información sin romper el estilo oscuro.
+Azul petróleo (#005F73) → Un color secundario que complementa bien sin restar protagonismo al verde. */
+
+
+/* Fuentes!!! */
+
+h1 {
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 5px;
+
+}
+
+h2 {
+    font-family: "Kanit", serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C1C1E;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    background-color: #0D0D0D;
+    padding: 10px 0px;
+    font-family: "Kanit", serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+/* Mini header y carrito */
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #00FF66;
+    padding: 0px;
+}
+
+
+
+
+.nav1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0D0D0D;
+    color: #00FF66;
+    width: 100%;
+
+
+}
+
+
+
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #00ff66;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #00ff66;
+    font-size: 15px;
+}
+
+
+.cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart img {
+    width: 50px;
+    height: 50px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #00ff66;
+    color: rgb(192, 192, 192);
+    font-size: 12px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .user-actions {
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .cart img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cart-count {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        justify-content: center;
+    }
+}
+
+
+/* Barra de navegacion!!!! */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ff66;
+    padding: 1px 30px;
+}
+
+
+.logo-container {
+    background-color: transparent;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    background-color: transparent;
+}
+
+.titulo{
+    color: #0D0D0D;
+}
+.nav-links {
+    list-style-type: none;
+    display: flex
+}
+
+.nav-links li {
+    padding: 30px;
+    margin-right: 40px;
+}
+
+.nav-links a {
+    color: #0D0D0D;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bar {
+    width: 25px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #00ff66;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
