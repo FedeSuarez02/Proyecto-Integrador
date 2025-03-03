@@ -19,11 +19,13 @@ h1 {
 
 h2 {
     font-family: "Kanit", serif;
-    font-weight: 600;
-    font-style: normal;
+    font-weight: 400;
+    font-style: italic;
     letter-spacing: 2px;
 
 }
+
+
 
 
 
@@ -140,6 +142,29 @@ h1 {
     }
 }
 
+.h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 15px;
+    color: #00FF66;
+    padding: 0px;
+}
+
+
+
+
+.nav1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: #0D0D0D;
+    color: #00FF66;
+    width: 100%;
+
+
+}
+
 
 @media (max-width: 480px) {
     header {
@@ -211,12 +236,12 @@ h1 {
     .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 0;
         background-color: #00ff66;
         width: 100%;
         text-align: center;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 
     .nav-links.active {
@@ -224,10 +249,118 @@ h1 {
     }
 
     .nav-links li {
-        margin: 20px 0;
+        margin: -5px 0;
     }
 
     .menu-toggle {
         display: flex;
     }
+}
+
+
+
+/* Seccion principal */
+
+
+/* Carrousel de imagenes destacadas!!! */
+
+.Caja-Carrousel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px  #00FF66
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+;
+}
+
+.carousel img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #00FF66;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media screen and (max-width: 768px) {
+    .Caja-Carrousel{
+        position: relative;
+        top: 380px;
+
+    }
+    
+    
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 5px  #00FF66
+    }
+    
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        will-change: transform;
+    ;
+    }
+    
+    .carousel img {
+        width: 100%;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+    
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #00FF66;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        z-index: 10;
+    }
+}
+
+.linea {
+    border-top: 2px solid rgb(69, 243, 1);
+    width: 100%;
+    
+}
+
+@media screen and (max-width: 768px) {
 }
