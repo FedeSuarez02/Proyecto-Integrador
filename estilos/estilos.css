@@ -187,7 +187,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00ff66;
+    background: linear-gradient(135deg, #00FF66, #01d9ff);
     padding: 1px 30px;
 }
 
@@ -202,9 +202,48 @@ h1 {
     background-color: transparent;
 }
 
-.titulo{
-    color: #0D0D0D;
+/* Barra de busqueda!!! */
+
+.search-container {
+    position: relative;
+    width: 300px;
 }
+
+.search-container input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 91, 187, 0.5);
+}
+
+.search-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #2469b4;
+}
+
+.search-container button:hover {
+    color: #0056b3;
+}
+
+
+/* LINKS */
+
 .nav-links {
     list-style-type: none;
     display: flex
@@ -501,8 +540,17 @@ button {
         align-items: center;
         top: 300px;
         position: relative;
-        
-    }
+        margin: 20px;
+}
+
+.card img {
+
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
 }
 
 /* Footer */
@@ -520,6 +568,7 @@ footer {
             justify-content: space-around;
             max-width: 1200px;
             margin: auto;
+            background: #222;
         }
 
         .footer-section {
@@ -544,7 +593,9 @@ footer {
         }
 
         .social-icons {
-            margin-top: 10px;
+            margin-top:20px;
+            padding: 20px;
+            
         }
 
         .social-icons a {
@@ -558,13 +609,31 @@ footer {
         .footer-bottom {
             margin-top: 20px;
             padding-top: 10px;
-            border-top: 1px solid #444;
+            border-top: 1px solid #00FF66;
             font-size: 14px;
+            color: #00FF66;
         }
 
         @media (max-width: 768px) {
             .footer-container {
                 flex-direction: column;
                 text-align: center;
-            }
+                position: relative;
+                top: 350px;
+                background-color: #222;
+            
         }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #00FF66;
+            font-size: 14px;
+            position: relative;
+            top: 350px;
+            background-color: #222;
+            color: #00FF66;
+        }
+
+    }
+    

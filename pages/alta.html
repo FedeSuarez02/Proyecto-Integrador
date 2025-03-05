@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/estilos/estilosAlta.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title>Document</title>
 
 </head>
@@ -45,10 +45,13 @@
 
                 </div>
 
-                <div class="titulo">
-                    <h2>"Nombre de la página"</h2>
+                
+                    <form class="search-container" action="resultados.html" method="GET">
+                        <input type="text" name="q" placeholder="Buscar productos...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
 
-                </div>
+                
 
                 <ul class="nav-links">
                     
@@ -69,6 +72,9 @@
 
 
 
+            
+
+
 
                 </div>
 
@@ -79,31 +85,122 @@
 
 
 
-                <script src="JS/script.js"></script>
+                
     </header>
 
 
     <main>
+        <h2>Agregar Camisetas</h2>
+        <form action="procesar_camiseta.php" method="POST" enctype="multipart/form-data">
 
+            <div class="form-group">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
 
-        <div class="contenedor">
-            <h1>Alta de camisetas</h1>
-            <form action="/alta.php" method="POST" enctype="multipart/form-data">
+            <div class="form-row">
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="precio">Precio ($):</label>
+                    <input type="number" id="precio" name="precio" required>
+                </div>
 
+                <div class="form-group">
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock" name="stock" required>
+                </div>
+            </div>
 
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+            </div>
 
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="local">Local</option>
+                    <option value="visita">Visita</option>
+                    <option value="tercera">Tercera equipación</option>
+                    <option value="retro">Retro</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="desc_corta">Descripción Corta:</label>
+                <input type="text" id="desc_corta" name="desc_corta">
+            </div>
+
+            <div class="form-group">
+                <label for="desc_larga">Descripción Larga:</label>
+                <textarea id="desc_larga" name="desc_larga"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="envio_gratis">
+                    Envío sin cargo
+                </label>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="edad_desde">Edad desde:</label>
+                    <input type="number" id="edad_desde" name="edad_desde">
+                </div>
+
+                <div class="form-group">
+                    <label for="edad_hasta">Edad hasta:</label>
+                    <input type="number" id="edad_hasta" name="edad_hasta">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="foto">Foto del Producto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+
+            <button type="submit" class="btn-submit">Agregar Camiseta</button>
+        </form>
     </main>
 
     <footer>
 
-
-
-
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>El mejor e-commerce de camisetas de fútbol. Envíos a todo el mundo y calidad garantizada. ⚽</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <p><a href="/index.html">Inicio</a></p>
+                <p><a href="#">Equipos</a></p>
+                <p><a href="/pages/contacto.html">Contacto</a></p>
+                <p><a href="#">Blog</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: contacto@futbolshop.com</p>
+                <p>Tel: +54 11 1234-5678</p>
+                <p>Ubicación: Buenos Aires, Argentina</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="/assets/RedesSociales/icons8-x-50 (2).png" alt="Twitter" width="30"></a>
+                    <a href="#"><img src="/assets/RedesSociales/icons8-instagram-50.png" alt="Instagram" width="30"></a>
+                    <a href="#"><img src="/assets/RedesSociales/icons8-whatsapp-50.png" alt="Whataspp" width="30"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 FutbolShop | Todos los derechos reservados
+        </div>
+    
     </footer>
 </body>
+
+<script src="/JS/script.js"></script>
+
+</html>
 
 </html>
